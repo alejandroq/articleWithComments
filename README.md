@@ -1,7 +1,7 @@
 # Article with Comments
 PHP-enabled web article with anonymous commenting capability. 
 
-Implementation:
+##Implementation:
 
 1) Execute SQL/sql.sql in MySQL
 
