@@ -5,6 +5,6 @@ PHP-enabled web article with anonymous commenting capability.
 
 1) Execute SQL/sql.sql in MySQL
 
-2) Set-up connection.php appropriately with your database (current set-up is recursive localhost). 
+2) Set-up connection.php for your connection string in the same level as htdoc. 
 
 3) Voila, enjoy! 
