@@ -7,6 +7,28 @@ fieldset,hr{border:0;padding:0}html{color:#222;font-size:1em;line-height:1.4}::-
    Author's custom styles
    ========================================================================== */
 
+header {
+	margin:1em;
+}
+h1{
+	padding:2em;
+	display:inline;
+}
+header aside {
+	display: inline;
+}
+nav {
+	display:inline;
+}
+h4 {
+	padding:1em;
+	display: inline;
+	font-weight: normal;
+}
+h4:hover {
+	cursor:pointer;
+	background-color:aliceblue;
+}
 
 
 /* ==========================================================================
