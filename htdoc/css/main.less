@@ -1,0 +1,201 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+fieldset,hr{border:0;padding:0}html{color:#222;font-size:1em;line-height:1.4}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}hr{display:block;height:1px;border-top:1px solid #ccc;margin:1em 0}audio,canvas,iframe,img,svg,video{vertical-align:middle}fieldset{margin:0}textarea{resize:vertical}.browserupgrade{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@red:#e06666;
+@font-size:large;
+@txtColor:#323232;
+@subtxtColor:#666666;
+@headerColor:#cccccc;
+@backgroundColor:#FAFAFF;
+@center:0em auto 0em auto;
+
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+.opacity(@opacity) {
+	opacity: @opacity / 100;
+	filter: ~"alpha(opacity=@{opacity})";
+}
+
+.hover {
+	&:hover{
+		cursor: pointer;
+		background-color: @headerColor + #222;
+	}
+}
+
+// #recipe_article, #recipe_comments {
+// 	display: none;
+// }
+
+section {
+	width: 40em;
+	margin: @center;
+	padding: 2em 1em 2em 1em;
+	@media (max-width: 752px) {
+		width: inherit;
+	}
+}
+
+body {
+	background-color: @backgroundColor;
+	font-size: @font-size;
+}
+
+header {
+	width: 100%;
+	overflow: hidden;
+	.transition(all .3s);
+	border-top-color: @red;
+	border-top-width: .5em;
+	border-top-style: solid;
+	background-color: @headerColor;
+	h1 {
+		font-size: 1.2em;
+		line-height: 0em;
+	}
+	h2 {
+		padding:1em;
+		margin:1.3em;
+		font-size: 1em; 
+	}
+	img {
+		width:4em;
+  		margin: .4em 1em 0em 2em;
+	}
+	div {
+		padding: 0em .5em 0em .5em;
+	}
+	h2, div {
+		float: left;
+		border-radius: .2em;
+		.transition(all .3s);
+		.hover;
+	}
+}
+
+#latest_recipes {
+	h3 {
+		width: 7.5em;
+		margin: 0em;
+		font-style: italic;
+		background-color: @red;
+	}
+	p {
+		text-indent: 5px;
+	}
+	p + p {
+		font-size: .8em;
+		line-height: 0em;
+		color:@subtxtColor;
+	}
+	aside {
+		padding: .1em 0em .1em 0em;
+		.transition(all .2s);
+		.hover;
+	}
+}
+
+#recipes_list {
+	p {
+		text-indent: 5px;
+		background-color: @red;
+		padding: 1em .5em 1em 0em;
+	}
+	aside {
+		padding: .5em;
+		overflow: hidden;
+		background-size:cover;
+  		background-repeat:no-repeat;
+		.transition(all .2s);
+		&:hover{
+			cursor: pointer;
+			padding: 5em; 
+		}
+	}
+}
+
+#recipe_article {
+	h4,
+	h3 {
+		line-height: 0em;
+		text-align: center;
+	}
+	aside {
+		padding: 10em;
+		overflow: hidden;
+		border-radius: .2em;
+		background-size:cover;
+  		background-repeat:no-repeat;
+	}
+}
+
+#recipe_comments {
+	aside {1
+		padding: 1em;
+	}
+	p {
+		margin-bottom: 0em;
+	}
+	p + p {
+		margin: 0em 0em 0em 1em;
+	}
+}
+#recipe_comments > h3 {
+	margin: 0em;
+	width: 7.5em;
+	font-style: italic;
+	background-color: @red;
+	@media (max-width: 752px) {
+		margin: @center;
+		text-align: center;
+	}
+}
+
+footer {
+	background-color: @headerColor;
+	overflow: hidden;
+	text-align: center;
+	p + p {
+		font-size: .8em;
+		line-height: 0em;
+		margin-bottom:2em;
+		color:@subtxtColor;
+	}
+	input {
+		margin: @center;
+		.transition(all .4s);
+		border-radius: .2em;
+		background-color: inherit;
+		&:hover {
+			background-color: white;
+		}
+	}
+	div {
+	    width: 100%;
+	    max-width: 15em;
+		color: @subtxtColor;
+	    margin:0em auto 2em auto;
+	}
+}
+
+hr {
+	width: 5em;
+	margin: @center;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden,.invisible{visibility:hidden}.hidden{display:none!important}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}

@@ -14,7 +14,7 @@ By Alejandro Quesada
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="description" content="Blog with Anonymous Commenting">
+        <meta name="description" content="Cheap Food Articles with Commenting">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.min.css">
@@ -25,12 +25,10 @@ By Alejandro Quesada
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-       <header>
-            <aside id="site-branding">
-                <h1>Philosophia</h1>
-            </aside>
-            <nav>
-                <h4>About</h4>
-                <h4>View Blog</h4>
-            </nav>
+        <header>
+            <div id="branding">
+               <img src="img/icon.svg" alt="Icon to Homepage">
+               <h1>CHEAP FOOD</h1>
+            </div>
+            <h2>I'm Feeling Lucky</h2>
         </header>
