@@ -27,6 +27,8 @@ CREATE TABLE subscriber(
 	subscriber_email VARCHAR(250)
 );
 
+SELECT * FROM post LEFT JOIN user ON post.post_author = user.user_ID WHERE post.post_ID = 1; 
+
 INSERT INTO user (display_name) VALUES("Alejandro Quesada");
 INSERT INTO post (post_author, post_content, post_title, post_excerpt) VALUES
 (1,	"lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",

@@ -5,14 +5,14 @@ if (isset($_GET['postID']))
  	if ($_GET['postID'] <> 0 && is_numeric($_GET['postID']))
  	{
  		//recipe article
- 		$sql = "SELECT * FROM post WHERE post_ID=" . $_GET['postID'];
+ 		$sql = "SELECT * FROM post LEFT JOIN user ON post.post_author = user.user_ID WHERE post_ID=" . $_GET['postID'];
  		$result = readPostDB($sql);
 
  		echo '<section id="recipe_article"><h4>How to make</h4>';
 
 		for ($i = 0; $i < count($result); $i++)
 		{
-			echo '<h3>' . $result[$i]["postTitle"] . '</h3><h4>' . $result[$i]["postExcerpt"] . ' by ' . $result[$i]["postAuthor"] . '</h4><aside style="background-image: url(img/' . strtolower($result[$i]["postTitle"]) . '1.jpeg);"></aside><p>' . $result[$i]["postContent"] . '</p>';
+			echo '<h3>' . $result[$i]["postTitle"] . '</h3><h4>' . $result[$i]["postExcerpt"] . ' by ' . $result[$i]["display_name"] . '</h4><aside style="background-image: url(img/' . strtolower($result[$i]["postTitle"]) . '1.jpeg);"></aside><p>' . $result[$i]["postContent"] . '</p>';
 		}
 		echo '</section><hr><section id="recipe_comments"><h3>Leave a Comment!</h3><p id="comment_msg"></p><form id="comment_input" name="comment_input"><p class="legend">Display Name</p><input type="text" id="displayName" name="displayName" required></input><p class="legend">Comment</p><textarea id="comment" name="comment" required></textarea><input type="submit" value="Submit Comment" method="post" onclick="submitComment()"></input></form>';
 
