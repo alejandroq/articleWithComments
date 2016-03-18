@@ -12,7 +12,7 @@ if (isset($_GET['postID']))
 
 		for ($i = 0; $i < count($result); $i++)
 		{
-			echo '<h3>' . $result[$i]["postTitle"] . '</h3><h4>' . $result[$i]["postExcerpt"] . ' by ' . $result[$i]["display_name"] . '</h4><aside style="background-image: url(img/' . strtolower($result[$i]["postTitle"]) . '1.jpeg);"></aside><p>' . $result[$i]["postContent"] . '</p>';
+			echo '<h3>' . $result[$i]["postTitle"] . '</h3><h4>' . $result[$i]["postExcerpt"] . ' by ' . $result[$i]["displayName"] . '</h4><aside style="background-image: url(img/' . strtolower($result[$i]["postTitle"]) . '1.jpeg);"></aside><p>' . $result[$i]["postContent"] . '</p>';
 		}
 		echo '</section><hr><section id="recipe_comments"><h3>Leave a Comment!</h3><p id="comment_msg"></p><form id="comment_input" name="comment_input"><p class="legend">Display Name</p><input type="text" id="displayName" name="displayName" required></input><p class="legend">Comment</p><textarea id="comment" name="comment" required></textarea><input type="submit" value="Submit Comment" method="post" onclick="submitComment()"></input></form>';
 
@@ -76,7 +76,8 @@ function readPostDB($sql) {
 					"postDate" => $row['post_date'],
 					"postContent" => $row['post_content'],
 					"postTitle" => $row['post_title'],
-					"postExcerpt" => $row['post_excerpt']
+					"postExcerpt" => $row['post_excerpt'],
+					"displayName" => $row['display_name']
 					);
 				$y[$i++]=$x;
 			}
