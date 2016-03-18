@@ -1,6 +1,5 @@
 <?php 
     include '../connection.php';
-    include 'functions.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -26,9 +25,9 @@ By Alejandro Quesada
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
-            <div id="branding">
+            <a href="index.php"><div id="branding">
                <img src="img/icon.svg" alt="Icon to Homepage">
                <h1>CHEAP FOOD</h1>
-            </div>
-            <h2>I'm Feeling Lucky</h2>
+            </div></a>
+            <a href="index.php?postID=2"><h2>I'm Feeling Lucky</h2></a>
         </header>

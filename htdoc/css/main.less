@@ -34,10 +34,6 @@ fieldset,hr{border:0;padding:0}html{color:#222;font-size:1em;line-height:1.4}::-
 	}
 }
 
-// #recipe_article, #recipe_comments {
-// 	display: none;
-// }
-
 section {
 	width: 40em;
 	margin: @center;
@@ -150,6 +146,28 @@ header {
 	p + p {
 		margin: 0em 0em 0em 1em;
 	}
+	input, textarea {
+		width:100%;
+		border-width:1px;
+		border-radius: .2em;
+		border-color:#323232;
+		background-color:lightgray;
+		.transition(all .4s);
+		&:hover {
+			background-color: white;
+		}
+	}
+	input[type=submit] {
+ 		display:block;
+  		width: 10em;
+  		margin: 1em auto 3em auto;
+  		&:hover {
+  			width: 12em;
+  		}
+	}
+}
+#comment_msg {
+	line-height: 3em;
 }
 #recipe_comments > h3 {
 	margin: 0em;
@@ -161,7 +179,6 @@ header {
 		text-align: center;
 	}
 }
-
 footer {
 	background-color: @headerColor;
 	overflow: hidden;
@@ -172,7 +189,13 @@ footer {
 		margin-bottom:2em;
 		color:@subtxtColor;
 	}
-	input {
+	div {
+	    width: 100%;
+	    max-width: 15em;
+		color: @subtxtColor;
+	    margin:0em auto 2em auto;
+	}
+	input, textarea {
 		margin: @center;
 		.transition(all .4s);
 		border-radius: .2em;
@@ -181,17 +204,40 @@ footer {
 			background-color: white;
 		}
 	}
-	div {
-	    width: 100%;
-	    max-width: 15em;
-		color: @subtxtColor;
-	    margin:0em auto 2em auto;
-	}
 }
 
 hr {
 	width: 5em;
 	margin: @center;
+}
+
+textarea {
+	resize:none;
+}
+
+.error {
+	color:@red;
+}
+
+.success {
+	color:green;
+}
+
+.hidden {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+	&:visited {
+		color:inherit;
+	}
+}
+
+#your_comment {
+	color: green;
+	padding: .5em .5em .7em .5em;
 }
 
 /* ==========================================================================

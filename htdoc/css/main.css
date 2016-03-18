@@ -171,6 +171,33 @@ header div:hover {
 #recipe_comments p + p {
   margin: 0em 0em 0em 1em;
 }
+#recipe_comments input,
+#recipe_comments textarea {
+  width: 100%;
+  border-width: 1px;
+  border-radius: .2em;
+  border-color: #323232;
+  background-color: lightgray;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#recipe_comments input:hover,
+#recipe_comments textarea:hover {
+  background-color: white;
+}
+#recipe_comments input[type=submit] {
+  display: block;
+  width: 10em;
+  margin: 1em auto 3em auto;
+}
+#recipe_comments input[type=submit]:hover {
+  width: 12em;
+}
+#comment_msg {
+  line-height: 3em;
+}
 #recipe_comments > h3 {
   margin: 0em;
   width: 7.5em;
@@ -194,7 +221,14 @@ footer p + p {
   margin-bottom: 2em;
   color: #666666;
 }
-footer input {
+footer div {
+  width: 100%;
+  max-width: 15em;
+  color: #666666;
+  margin: 0em auto 2em auto;
+}
+footer input,
+footer textarea {
   margin: 0em auto 0em auto;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -203,18 +237,36 @@ footer input {
   border-radius: .2em;
   background-color: inherit;
 }
-footer input:hover {
+footer input:hover,
+footer textarea:hover {
   background-color: white;
-}
-footer div {
-  width: 100%;
-  max-width: 15em;
-  color: #666666;
-  margin: 0em auto 2em auto;
 }
 hr {
   width: 5em;
   margin: 0em auto 0em auto;
+}
+textarea {
+  resize: none;
+}
+.error {
+  color: #e06666;
+}
+.success {
+  color: green;
+}
+.hidden {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+#your_comment {
+  color: green;
+  padding: .5em .5em .7em .5em;
 }
 /* ==========================================================================
    Helper classes

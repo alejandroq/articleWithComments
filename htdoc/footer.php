@@ -2,9 +2,9 @@
 		<section>
 			<p>Subscribe for more content!</p>
 			<p>We will never share your Email!</p>
-			<form name="subscribe">
+			<form id="subscribe">
 				<input type="text" name="subscribe_email" id="subscribe_email" placeholder="Leave your Email Here!"></input>
-				<input type="submit" value="Subscribe" onclick="ajax"></input>
+				<input type="submit" value="Subscribe" method="post" onclick="submitSubscriberEmail()"></input>
 			</form>
 		</section>
 		<div>website & content &copy; 2016 alejandro quesada</div>
